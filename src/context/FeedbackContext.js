@@ -13,19 +13,19 @@ export const FeedbackProvider = ({ children }) => {
     {
       id: 2,
       text: "This is feedback item 2",
-      rating: 10,
+      rating: 9,
     },
     {
       id: 3,
       text: "This is feedback item 3",
-      rating: 10,
+      rating: 7,
     },
   ])
 
   const [feedbackEdit, setFeedbackEdit] = useState({
     item: {},
-    edit: false
-  });
+    edit: false,
+  })
 
   // Add feedback
   const addFeedback = (newFeedback) => {
@@ -44,7 +44,7 @@ export const FeedbackProvider = ({ children }) => {
   const editFeedback = (item) => {
     setFeedbackEdit({
       item,
-      edit: true
+      edit: true,
     })
   }
 
@@ -54,7 +54,8 @@ export const FeedbackProvider = ({ children }) => {
         feedback,
         deleteFeedback,
         addFeedback,
-        editFeedback
+        editFeedback,
+        feedbackEdit,
       }}
     >
       {children}
